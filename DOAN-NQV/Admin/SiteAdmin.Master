@@ -1,0 +1,299 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteAdmin.master.cs" Inherits="DOAN_NQV.Admin.SiteAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Admin</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <%--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">--%>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/paper-dashboard.css?v=2.0.1" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/demo/demo.css" rel="stylesheet" />
+    <style type='text/css'>
+        .form {
+            background-color: whitesmoke;
+        }
+
+        .tablewrapper {
+            position: relative;
+        }
+
+        .table {
+            display: table;
+            padding: 10px;
+        }
+
+        .table1 {
+            background-color: white;
+            color: darkslategrey;
+            padding: 10px;
+            width: 1300px;
+            height: 30px;
+            border-radius: 20px;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+
+
+        .column {
+            display: table-cell;
+            color: darkslategrey;
+            font-weight: bold;
+        }
+
+            .column.Left {
+                position: inherit;
+                text-align: center;
+                padding: 20px;
+                width: 220px
+            }
+
+            .column.Mid {
+                position: center;
+                text-align: center;
+                width: 1000px
+            }
+
+            .column.Right {
+                text-align: right;
+                width: 180px
+            }
+
+        .cell {
+            display: table-cell;
+            border: 1px; /*border: 1px solid red;*/
+            padding: 1em;
+        }
+
+            .cell.empty {
+                border: 2px solid dashed;
+                border-radius: 20px;
+                border-color: red;
+                background-color: white;
+                height: 580px;
+            }
+
+            .cell.rowspanned {
+                position: absolute;
+                padding-left: initial;
+                margin-left: 10px;
+                position: center;
+            }
+
+        .btn {
+            height: 40px;
+            width: 200px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 20px;
+            background-color: whitesmoke;
+            color: darkslategrey;
+            border-color: transparent;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+            .btn:hover {
+                height: 40px;
+                width: 200px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: medium;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 20px;
+                background-color: white;
+                color: darkgreen;
+                border-color: transparent;
+                margin: 4px;
+                cursor: pointer;
+            }
+
+        .corners {
+            border: 1px solid green;
+            -moz-border-radius: 8px;
+            border-radius: 8px;
+            overflow: hidden;
+            -webkit-border-radius: 8px;
+            border-color: transparent;
+        }
+
+        .grd {
+            background-color: white;
+        }
+
+        .linkBtnEditUpdate {
+            padding: initial;
+            color: white;
+            background-color: limegreen;
+            border-radius: 20px;
+        }
+
+        .linkBtnRemoveCancel {
+            text-align: center;
+            vertical-align: middle;
+            color: white;
+            background-color: orangered;
+            border-radius: 20px;
+            margin: 5px
+        }
+
+        .linkBtnAdd {
+            display: block;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            margin: 0 auto;
+            display: flex;
+            position: center;
+        }
+
+        .txt {
+            width: 400px;
+            height: 25px;
+            text-align: center;
+            border: 5px;
+        }
+
+        .ddl {
+            text-align: center;
+        }
+
+        .custom-file-upload {
+            border: 1px solid #ccc;
+            display: inline-block;
+            padding: 6px 12px;
+            cursor: pointer;
+            border-color: transparent;
+        }
+
+        .marginLeft {
+            margin-left: 15px;
+        }
+
+        .tab {
+            font-family: Arial;
+            font-weight: bold;
+            color: forestgreen;
+            text-align: center;
+            vertical-align: middle;
+            margin-bottom: 5px;
+            padding-top: 5px;
+            font-size: 15px;
+            width: 200px;
+            height: 25px;
+            background-color: white;
+            border-radius: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        var prm = Sys.WebForms.PageRequestManager.getInstance();
+        var scrollPos = 0;
+        var element = null;
+
+
+        if (prm != null) {
+            prm.add_endRequest(end_req_handler);
+        }
+
+
+        function SavePosition() {
+            scrollPos = document.getElementById("mainDiv").scrollTop;
+        }
+
+
+        function end_req_handler(sender, args) {
+            loadScroll();
+        }
+
+
+        function loadScroll() {
+            document.getElementById("mainDiv").scrollTop = scrollPos;
+        }
+    </script>
+
+</head>
+<body class="form">
+    <form id="form1" runat="server">
+        <div class="wrapper ">
+            <div class="main-panel">
+                <!-- Navbar -->
+                <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+                    <div class="container-fluid">
+                        <div class="navbar-wrapper">
+                            <div class="navbar-toggle">
+                                <button type="button" class="navbar-toggler">
+                                    <span class="navbar-toggler-bar bar1"></span>
+                                    <span class="navbar-toggler-bar bar2"></span>
+                                    <span class="navbar-toggler-bar bar3"></span>
+                                </button>
+                            </div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                            <span class="navbar-toggler-bar navbar-kebab"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                            <%--<div class="input-group no-border">
+                                <asp:TextBox ID="txtSearch" runat="server" CssClass="form-control"></asp:TextBox>
+                                <div class="input-group-append">
+                                    <div class="input-group-text">
+                                        <i class="nc-icon nc-zoom-split"></i>
+                                    </div>
+                                </div>
+                            </div>--%>
+                            <ul class="navbar-nav">
+                                <li class="nav-item" style="float: right">
+                                    <a class="nav-link btn-rotate" href="/Admin/ThongTinCaNhan.aspx">
+                                        <i class="nc-icon nc-circle-10"></i>
+                                        <p>
+                                            <span class="d-lg-none d-md-block">Account</span>
+                                        </p>
+                                        <p>Xin chào : <span><asp:Label ID="lbName" runat="server" Text=""></asp:Label></span></p>
+                                    </a>
+
+                                </li>
+                                <li class="nav-item mt-2" >
+                                    <asp:LinkButton ID="btnlogout" runat="server" Style="margin-left: 50px;" OnClick="btnlogout_Click">
+                                                 <img src="../images/logout.png" width="25" height="25"/>
+                                    </asp:LinkButton>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div class="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

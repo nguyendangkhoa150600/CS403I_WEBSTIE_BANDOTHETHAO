@@ -1,0 +1,307 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MP.master.cs" Inherits="DOAN_NQV.SHARED.MP" %>
+<%@ Import namespace="webBanThietBiMayTinh.App_Code" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>VKSPORTS</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+     <link rel="icon" type="image/png" href="/images/favicon.ico" />
+    <%--CAN THEM--%>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <%--CAN THEM--%>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      <%--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">--%>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Wallpoet&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+    <link href="mp.css" rel="stylesheet" />
+    <link href="../assets/assets/dist/sweetalert.css" rel="stylesheet" />
+    <script src="../assets/assets/dist/sweetalert.js"></script>
+    <script src="../assets/assets/dist/sweetalert.min.js"></script>
+
+  
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+     <%--  PHẦN MỞ ĐẦU--%>
+
+
+
+
+
+       <%-- TOP1--%>
+        <div class="topmenup">
+    <nav class="navbar navbar-expand-sm fixed-top menutopp">
+      <div class="lh" style="font-size: 17px;color: whitesmoke;margin-top:-60px;"> Liên hệ</div>
+      <div class="lh2" >: 0931 936 079</div>
+
+
+
+
+      <div class="collapse navbar-collapse" id="" style="margin-left: 350px;">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
+
+              
+          <li class="nav-item " style="margin-top:-10px;">
+            <a class="nav-link menu2" href="#" >
+                <asp:LinkButton ID="btngt" runat="server"  class="menu3" >Giới Thiệu</asp:LinkButton>
+                <span
+                class="sr-only">(current)</span></a>
+          </li>
+
+          <%-- <li class="nav-item" style="margin-top:-10px;">--%>
+            <a class="nav-link menu2" href="../Login_v2/Signup.aspx" style="padding-right: 5px;margin-top:-20px;">
+                <asp:LinkButton ID="btnDangKy" runat="server" OnClick="btnDangKy_Click" class="menu3" style="padding-right: 5px;margin-top:-51px;position:relative;" >Đăng ký</asp:LinkButton>
+            </a>
+          <%--</li>--%>
+              <li class="nav-item" style="margin-top:-10px;">
+                    <a class="nav-link menu2" href="../Login_v2/Login.aspx">
+                     <asp:LinkButton ID="btnDangNhap2" runat="server" OnClick="btnDangNhap2_Click"  class="menu3" style="padding-left:12px;">Đăng nhập</asp:LinkButton>
+                    </a>
+              </li  >
+
+            <%--  <%-- dropdown--%>
+
+            <div class="dropdown" style="margin-top:-50px;" id="dropdn" runat="server" visible="false"  >
+              <%--<button class=" ndrop" type="button"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server">
+                Dropdown button
+              </button>--%>
+      <asp:LinkButton ID="drnameuser" runat="server" data-toggle="dropdown"   style="padding-right:-5px;margin-top:20px;" class="menu3"  >Đăng ký</asp:LinkButton>
+
+               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="height:200px;"  >
+                  
+                   <a class="dropdown-item "  >
+                     <asp:LinkButton ID="btnxtt" runat="server" class="dropdown-item  dri" OnClick="btnxtt_Click"    >Tài khoản của tôi</asp:LinkButton>
+                </a>
+
+                  <a class="dropdown-item "  >
+                     <asp:LinkButton ID="btndmk" runat="server" class="dropdown-item  dri" OnClick="btndmk_Click1" >Đổi mật khẩu</asp:LinkButton>
+                </a>
+                    
+                 <a class="dropdown-item ">
+                     <asp:LinkButton ID="btnXemDonHang" runat="server" OnClick="btnXemDonHang_Click" class="dropdown-item  dri">Danh sách hóa đơn</asp:LinkButton>
+                </a>
+                    <div class="dropdown-divider"></div>
+                   <a class="dropdown-item " >
+                       <asp:LinkButton ID="btnDangNhap" runat="server" OnClick="btnDangNhap_Click" class="dropdown-item  dri"  >Đăng xuất</asp:LinkButton>
+                  </a>
+                </div>
+        </div>
+             <%-- dropdown--%>
+        
+<%--          <li class="nav-item" style="margin-top:-10px;">
+            <a class="nav-link menu2" href="../Login_v2/Login.aspx">
+                <asp:LinkButton ID="" runat="server" OnClick="btnXemDonHang_Click" class="menu3" Visible="false">Xem don hang</asp:LinkButton>
+            </a>
+          </li>--%>
+
+
+
+
+        </ul>
+
+      </div>
+
+
+    </nav>
+  </div>
+
+<%-- TOP1--%>
+        <%--TÌM KIẾM--%>
+
+       <div class="input-group fixed-top " style="margin-top:57px;width:50%;margin-left:400px;">
+           <a class="gt"  href="../USER/DSSP.aspx" style="text-decoration:none;">VKSPORTS</a>
+<%--  <input type="search" class="form-control rounded" style="height:45px;background-color:#EEEEEE;" placeholder="Tên Sản Phẩm...." aria-label="Search"
+    aria-describedby="search-addon" />--%>
+           <asp:TextBox ID="txtSearch" runat="server" class="form-control rounded" style="height:45px;background-color:#EEEEEE;position:relative;" placeholder="Tên Sản Phẩm...." aria-label="Search"
+    aria-describedby="search-addon"></asp:TextBox>
+           <asp:Button ID="btntk" runat="server" Text="Tìm kiếm" class="btn btn-outline-warning"  style="background-color:#f57224;height:48px;margin-left:15px;position:relative;z-index:0;" OnClick="btntk_Click" />
+
+               <a id="cart" class="fas fa-shopping-cart" style="font-size:40px;padding-left:50px;color:#FF0000;text-decoration:none;margin-left:800px;position:absolute;" href="#"> <span class="badge"><%= (Session["Cart"] as Cart).ListItem.Count %></span></a>
+</div>
+
+
+
+      
+       
+
+
+         <%--TÌM KIẾM--%>
+        <%--TOP2--%>
+
+        <div class="topmenu">
+    <nav class="navbar navbar-expand-sm fixed-top menutop">
+
+      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
+        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse task" id="collapsibleNavId">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 text1">
+          <li class="nav-item active">
+            <a class="nav-link menu1" href="../USER/DSSP.aspx">Trang Chủ<span class="sr-only">(current)</span></a>
+          </li>
+
+
+          <li class="nav-item ">
+           
+
+              <asp:HyperLink ID="dm1" class="nav-link menu1 1 " runat="server"  NavigateUrl='<%# "~/USER/DSSP.aspx?MADM="   %>'>Áo đấu câu lạc bộ</asp:HyperLink>
+          </li>
+          <li class="nav-item ">
+            <%--<a class="nav-link menu1  2" href="#">Thiết bị tập</a>--%>
+              <asp:HyperLink ID="HyperLink1" class="nav-link menu1  2" runat="server"  NavigateUrl='<%# "~/USER/DSSP.aspx?MADM=" + Eval("MADM") %>'>Thiết bị tập</asp:HyperLink>
+          </li>
+          <li class="nav-item ">
+        <%--    <a class="nav-link menu1 3 " href="#">Giày thể thao nam</a>--%>
+              <asp:HyperLink ID="HyperLink2" class="nav-link menu1 3 " runat="server"  NavigateUrl='<%# "~/USER/DSSP.aspx?MADM=" + Eval("MADM") %>'>Giày thể thao nam</asp:HyperLink>
+          </li>
+          <li class="nav-item ">
+            <%--<a class="nav-link menu1 4 " href="#">Áo khoác </a>--%>
+              <asp:HyperLink ID="HyperLink3" class="nav-link menu1 4 " runat="server"  NavigateUrl='<%# "~/USER/DSSP.aspx?MADM=" + Eval("MADM") %>'>Áo khoác</asp:HyperLink>
+          </li>
+
+
+
+        </ul>
+
+      </div>
+    </nav>
+
+  </div>
+
+
+        <%--TOP2--%>
+
+    <%--  PHẦN MỞ ĐẦU--%>
+
+
+        <%--PHẦN NỘI DUNG--%>
+
+
+        <div  id="main-content" style="overflow:auto" class="main" style="width: 100%;">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+    <%--PHẦN NỘI DUNG--%>
+
+
+
+
+
+
+
+
+
+    <%--PHẦN CUỐI--%>
+
+<!-- Footer -->
+<footer class="bg-dark">
+
+    <div class="phancuoi">
+        <div class="container">
+          <h1 style="text-align: center;font-size: 40px;color:#f64c72;border-top: solid 2px  #222222;">VKSports</h1>
+          <div class="row">
+            <div class="col-md-4">
+
+              <h3>Giới thiệu:</h3>
+              <p0 style="font-size: 16px;">Thương hiệu quần áo, dụng cụ thể thao VKSports tự hào giới
+                thiệu và phục
+                vụ đến mọi đối tượng khách hàng. Sự tôn trọng đối với mọi người
+                (khách hàng, nhân viên, nhà cung cấp)
+                là kim chỉ nam trong kinh doanh của chúng tôi,
+                chúng tôi mong muốn củng cố các mối quan hệ đối tác lâu dài.</p0>
+
+
+            </div>
+            <div class="col-md-4">
+
+              <h3>Hỗ trợ khách hàng:</h3>
+              <p class="c">Chính sách đổi trả </p>
+              <p class="c">Chính sách giao hàng</p>
+              <p class="c">Chính sách vận chuyển</p>
+              <p class="c">Chính sách khuyến mãi</p>
+
+            </div>
+
+            <div class="col-md-4">
+
+              <h3>Liên Hệ:</h3>
+              <p>Địa Chỉ shop:55 Thái Phiên,Tam Kỳ,Quảng Nam </p>
+              <p><i class="fas fa-phone"></i>Hotline:0931.936.069-0903.565.020</p>
+              <p><i class="fas fa-globe-americas"></i>website:VKSports.com</p>
+              <p>Tài khoản: </p>
+              <div class="icon"><i class="fab fa-facebook"
+                  <link href="https://www.facebook.com/profile.php?id=100026217303860"> </i> <i
+                  class="fab fa-twitter-square"></i> <i class="fab fa-google-plus"></i> <i
+                  class="fab fa-youtube-square"></i></div>
+
+            </div>
+
+
+          </div>
+
+        </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <%--PHẦN CUỐI--%>
+
+
+
+    <%--ICON--%>
+     <div class="nuttop">
+            <i class="fas fa-home home" style="font-size: 28px;"></i>
+             <i class="far fa-envelope mail" style="font-size: 28px;"></i>
+              <i class="far fa-arrow-alt-circle-up top" style="font-size: 28px;"></i>
+                <i class="fas fa-phone dt " style="font-size: 28px;"></i>
+     </div>
+    <%--ICON--%>
+
+    <div class="shopping-cart-container " style="margin-right:-218px;" >
+        <div class="shopping-cart">
+    <div class="shopping-cart-header">
+      <i class="fa fa-shopping-cart cart-icon"></i><span class="badge"><%= (Session["Cart"] as Cart).ListItem.Count %></span>
+      <div class="shopping-cart-total">
+        <span class="lighter-text">Tông Cộng:</span>
+        <span class="main-color-text"><%= (Session["Cart"] as Cart).Total() %></span>
+      </div>
+    </div> <!--end shopping-cart-header -->
+
+    <ul class="shopping-cart-items"  >
+
+       <% foreach (var item in (Session["Cart"] as Cart).ListItem)
+           { %>
+      <li class="clearfix">
+        <img src="/images/<%= item.Value["HINHANH"] %>" style="width:50px;height:50px" alt="<%= item.Value["TENSP"] %>" />
+        <span class="item-name" style="text-align:center;"><%= item.Value["TENSP"] %></span>
+      <%--  <span class="item-price"><%= item.Value["THANHTIEN"] %></span>--%>
+        <span class="item-quantity" style="float:right;">Số lượng: <%= item.Value["SOLUONG"] %></span>
+      </li>
+      <% } %>
+    </ul>
+
+    <a href="/USER/GIOHANG.aspx" class="button" style="text-decoration:none";>Kiểm tra giỏ hàng</a>
+  </div> <!--end shopping-cart -->
+    </div>
+
+    <script src="../SHARED/mp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+.topmenup {
+    position: relative;
+    z-index: 8;
+    width: 100%;
+    height: 100%;
+}
+
+.topmenu {
+    position: relative;
+    z-index: 8;
+    margin-top: 9%;
+}
+
+.menutop {
+    position: fixed;
+    background: #2f2fa2;
+    width: 100%;
+    margin-top: 4%;
+}
+.captcha {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 37px;
+}
+.menutopp {
+    background-color: #232323;
+    width: 100%;
+}
+/*.lh2 {
+    color: #f64c72;
+    
+    font-size: 19px;
+    padding-right: 700px;
+}*/
+.menu2 {
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.82s;
+    color: #ff65C1;
+}
+
+    .menu2:hover {
+        color: #ff2700;
+    }
+
+.gt {
+    font-size: 46px;
+    font-family: 'Courier New', Courier;
+    transition: 0.82s;
+    cursor: pointer;
+    color: #ffd400;
+}
+
+    .gt:hover {
+        color: #f64c72;
+    }
+
+
+.menu1, .dn {
+    color: whitesmoke !important;
+    font-weight: bold;
+    font-size: 19px;
+    margin-left: 82px;
+    cursor: pointer;
+    transition: 0.82s;
+}
+
+    .menu1:hover, .dn:hover {
+        color: #f64c72 !important;
+        border-bottom: crimson 2px solid;
+    }
+
+
+h6 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', Arial, sans-serif;
+    font-size: 19px;
+    padding-top: 46px;
+}
+
+.phancuoi {
+    position: relative;
+    background-color: #22121D;
+    color: whitesmoke;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+h1:hover {
+    color: #ffd400;
+}
+
+h3 {
+    border-bottom: whitesmoke 2px solid;
+}
+
+p {
+    font-size: 16px;
+}
+
+    p:hover {
+        color: #ffd400;
+    }
+
+.icon {
+    font-size: 37px;
+}
+
+.fab.fa-facebook:hover {
+    background-color: #365899;
+    border-radius: 40%;
+}
+
+.fab.fa-twitter-square:hover {
+    background-color: #1fa1f2;
+    border-radius: 10%;
+}
+
+.fab.fa-google-plus:hover {
+    background-color: #ea4335;
+    border-radius: 40%;
+}
+
+.fab.fa-youtube-square:hover {
+    background-color: #ea4335;
+    border-radius: 20%;
+}
+
+.far.fa-check-circle {
+    font-size: 18px;
+}
