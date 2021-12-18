@@ -13,6 +13,7 @@ using DOAN_NQV.App_code;
 
 namespace DOAN_NQV.Login_v2
 {
+    //Tran Van Son
     public partial class QMK : System.Web.UI.Page
     {
         XL xl;
