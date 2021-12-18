@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SHARED/MP.Master" AutoEventWireup="true" CodeBehind="confirm2.aspx.cs" Inherits="DOAN_NQV.Login_v2.confirm2" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%-- Tran Van Son--%>
      <%--<link href="../assets/assets/dist/sweetalert.css" rel="stylesheet" />
     <script src="../assets/assets/dist/sweetalert.js"></script>
     <script src="../assets/assets/dist/sweetalert.min.js"></script>

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SHARED/MP.Master" AutoEventWireup="true" CodeBehind="DMKLOGIN.aspx.cs" Inherits="DOAN_NQV.Login_v2.DMKLOGIN" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%-- Tran Van Son--%>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" style="height:420px;">
