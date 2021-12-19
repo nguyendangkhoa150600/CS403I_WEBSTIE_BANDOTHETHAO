@@ -45,49 +45,49 @@
         <div class="sidebar-wrapper">
             <ul class="nav">
                 <li>
-                    <a href="/Admin/ThongKe.aspx">
+                    <a href="../Admin/ThongKe.aspx">
                         <i class="nc-icon nc-bank"></i>
                         <p>Thống kê</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/Admin/DonHang.aspx">
+                    <a href="../Admin/DonHang.aspx">
                         <i class="nc-icon nc-diamond"></i>
                         <p>Đơn hàng</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/Admin/SanPham.aspx">
+                    <a href="../Admin/SanPham.aspx">
                         <i class="nc-icon nc-pin-3"></i>
                         <p>Sản phẩm</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/Admin/NhaCungCap.aspx">
+                    <a href="../Admin/NhaCungCap.aspx">
                         <i class="nc-icon nc-bell-55"></i>
                         <p>Nhà cung cấp</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/Admin/DanhMuc.aspx">
+                    <a href="../Admin/DanhMuc.aspx">
                         <i class="nc-icon nc-single-02"></i>
                         <p>Danh mục hàng</p>
                     </a>
                 </li>
                 <li class="active ">
-                    <a href="/Admin/TaiKhoan.aspx">
+                    <a href="../Admin/TaiKhoan.aspx">
                         <i class="nc-icon nc-tile-56"></i>
                         <p>Tài khoản</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/Admin/KhuyenMai.aspx">
+                    <a href="../Admin/KhuyenMai.aspx">
                         <i class="nc-icon nc-caps-small"></i>
                         <p>Khuyến mãi</p>
                     </a>
                 </li>
                 <li class="active-pro">
-                    <a href="/Admin/ThongTinCaNhan.aspx">
+                    <a href="../Admin/ThongTinCaNhan.aspx">
                         <i class="nc-icon nc-spaceship"></i>
                         <p>Thông tin cá nhân</p>
                     </a>

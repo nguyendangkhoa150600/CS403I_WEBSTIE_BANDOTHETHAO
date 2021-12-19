@@ -37,20 +37,20 @@ namespace DOAN_NQV.Admin
             loadData();
         }
 
-        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
-        {
-            int MATK = (int)Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
-
-            SQL = "UPDATE TAIKHOAN SET TRANGTHAI = 1 WHERE MATK = " + MATK;
-            xuly.thucthiSQL(SQL);
-            loadData();
-        }
-
         protected void GridView1_RowEditing(object sender, GridViewEditEventArgs e)
         {
             int MATK = (int)Convert.ToInt32(GridView1.DataKeys[e.NewEditIndex].Value);
 
             SQL = "UPDATE TAIKHOAN SET TRANGTHAI = 0 WHERE MATK = " + MATK;
+            xuly.thucthiSQL(SQL);
+            loadData();
+        }
+
+        protected void GridView1_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            int MATK = (int)Convert.ToInt32(GridView1.DataKeys[e.RowIndex].Value);
+
+            SQL = "UPDATE TAIKHOAN SET TRANGTHAI = 1 WHERE MATK = " + MATK;
             xuly.thucthiSQL(SQL);
             loadData();
         }
