@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.IO;
 namespace DOAN_NQV.Login_v2
 {
+    //Tran Van Son
     public partial class capcha : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)

@@ -9,6 +9,7 @@ using System.Web.UI;
 
 namespace DOAN_NQV.App_code
 {
+    //file Xu li du lieu tu BE
     public class SQLXuLyDuLieu
     {
         SqlConnection con;

@@ -2,7 +2,7 @@
 (function ($) {
     "use strict";
 
-
+    //Tran Van Son
     /*==================================================================
     [ Focus input ]*/
     $('.input100').each(function () {

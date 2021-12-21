@@ -5,6 +5,8 @@ using System.Web;
 
 namespace WebApplication1.Login_v2
 {
+
+    //Tran Van Son SignUp
     public static class SignUp
     {
         static string tendangnhap,hoten, matkhau, diachi,gioitinh,sdt, gmail, maxt;
